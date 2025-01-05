@@ -1,6 +1,10 @@
 **/__pycache__
 /checkpoint/
 video_data/dir_to_data/*
+video_data/dir_to_data-2/*
 input/mz.mp4
 output/train-validate-*.mp4
 output/output-*.mp4
+output/output-render.mp4
+video_data/mingzheng-2
+video_data/mingzheng-3

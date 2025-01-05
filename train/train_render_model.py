@@ -64,8 +64,7 @@ if __name__ == "__main__":
     train_data_length = len(training_data_loader)
     # init network
     net_g = DINet_five_Ref(opt.source_channel, opt.ref_channel).cuda()
-    net_d = Discriminator(opt.target_channel, opt.D_block_expansion,
-                          opt.D_num_blocks, opt.D_max_features).cuda()
+    net_d = Discriminator(opt.target_channel, opt.D_block_expansion, opt.D_num_blocks, opt.D_max_features).cuda()
     net_vgg = Vgg19().cuda()
 
     # set optimizer
@@ -90,8 +89,7 @@ if __name__ == "__main__":
     net_g_scheduler = get_scheduler(optimizer_g, opt.non_decay, opt.decay)
     net_d_scheduler = get_scheduler(optimizer_d, opt.non_decay, opt.decay)
 
-    train_log_path = os.path.join(
-        "checkpoint/{}/log".format("DiNet_five_ref"), "train")
+    train_log_path = os.path.join("checkpoint/{}/log".format("DiNet_five_ref"), "train")
 
     os.makedirs(train_log_path, exist_ok=True)
     train_logger = SummaryWriter(train_log_path)
