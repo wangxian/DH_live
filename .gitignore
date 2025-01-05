@@ -3,3 +3,4 @@
 video_data/dir_to_data/*
 input/mz.mp4
 output/train-validate-*.mp4
+output/output-*.mp4

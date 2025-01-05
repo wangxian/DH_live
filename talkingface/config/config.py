@@ -41,8 +41,7 @@ class DINetTrainingOptions():
         self.parser.add_argument('--audio_channel', type=int, default=29, help='input audio channels')
         self.parser.add_argument('--augment_num', type=int, default=32, help='augment training data')
         self.parser.add_argument('--mouth_region_size', type=int, default=64, help='augment training data')
-        self.parser.add_argument('--train_data', type=str, default=r"./asserts/training_data/training_json.json",
-                            help='path of training json')
+        self.parser.add_argument('--train_data', type=str, default=r"./asserts/training_data/training_json.json", help='path of training json')
         self.parser.add_argument('--batch_size', type=int, default=24, help='training batch size')
         self.parser.add_argument('--lamb_perception', type=int, default=10, help='weight of perception loss')
         self.parser.add_argument('--lamb_syncnet_perception', type=int, default=0.1, help='weight of perception loss')
